@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Information</title>
+</head>
+<body>
+    <h1>Record Movie Information</h1>
+    <form method="POST" action="{{ url_for('movie') }}">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Genre:</label><br>
+        <select name="genre" required>
+            <option value="action">Action</option>
+            <option value="horror">Horror</option>
+            <option value="documentary">Documentary</option>
+            <option value="comedy">Comedy</option>
+            <option value="romance">Romance</option>
+            <option value="science fiction">Science Fiction</option>
+            <option value="fantasy">Fantasy</option>
+        </select><br><br>
+
+        <label>Duration (in minutes):</label><br>
+        <input type="number" name="duration" required><br><br>
+
+        <label>Ticket Price:</label><br>
+        <input type="number" step="0.01" name="ticket_price" required><br><br>
+
+        <label>Review:</label><br>
+        <textarea name="review" rows="4" cols="50" required></textarea><br><br>
+
+        <label>Production:</label><br>
+        <input type="text" name="production" required><br><br>
+
+        <label>Hall:</label><br>
+        <input type="text" name="hall" required><br><br>
+
+        <label>Capacity:</label><br>
+        <input type="number" name="capacity" required><br><br>
+
+        <label>Synopsis:</label><br>
+        <textarea name="synopsis" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="checkbox" name="agree" > I agree to the terms and conditions<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
